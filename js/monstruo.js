@@ -15,7 +15,8 @@ export class monstruo extends criatura {
    
 }
 class Orco extends monstruo{
-    
+    nombre = "Orco"
+
 }
 class Goblin extends monstruo{
 
