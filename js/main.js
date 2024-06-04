@@ -1,6 +1,6 @@
 import {personaje} from "./personaje.js";
 import {guerrero} from "./guerrero.js";
-import {mago} from "./mago.js";
+import {monstruo} from "./monstruo.js";
 
 let personajeDefault1 = new personaje();
 let personajeGuerrero1 = new guerrero("Manuel");
