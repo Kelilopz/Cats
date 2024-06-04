@@ -14,14 +14,14 @@ export class monstruo extends criatura {
     // }
    
 }
-class Orco extends monstruo{
+export class Orco extends monstruo{
     nombre = "Orco"
 
 }
-class Goblin extends monstruo{
+export class Goblin extends monstruo{
 
 }
 
-class Kobold extends monstruo{
+export class Kobold extends monstruo{
 
 }
