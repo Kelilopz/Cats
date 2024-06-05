@@ -1,26 +1,28 @@
-import { criatura } from "./personaje.js";
+import { Criatura } from './criatura.js';
 
-export class monstruo extends criatura {
+export class Monstruo extends Criatura {
     constructor(nombre, vida, vidaMaxima, ataque) {
+        if (new.target === Monstruo) {
+            throw new TypeError("No se puede instanciar una clase abstracta.");
+        }
         super(nombre, vida, vidaMaxima, ataque);
-      }
-   
-}
-export class Orco extends monstruo{
-    constructor() {
-        super("Orco", 50, 50, 15);
-      }
-    
-
-}
-export class Goblin extends monstruo{
-    constructor() {
-        super("Goblin", 30, 30, 10);
-      }
+    }
 }
 
-export class Kobold extends monstruo{
-    constructor() {
-        super("Kobold", 20, 20, 5);
-      }
+export class Orco extends Monstruo {
+    constructor(nombre) {
+        super(nombre, 30, 30, 10);
+    }
+}
+
+export class Goblin extends Monstruo {
+    constructor(nombre) {
+        super(nombre, 20, 20, 6);
+    }
+}
+
+export class Kobold extends Monstruo {
+    constructor(nombre) {
+        super(nombre, 10, 10, 4);
+    }
 }
